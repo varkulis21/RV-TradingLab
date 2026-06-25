@@ -1,6 +1,7 @@
 import MetaTrader5 as mt5
 import sys
 import os
+import time
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 from config.mt5_config import MT5_PATH, MT5_LOGIN, MT5_PASS, MT5_SERVER
 
@@ -30,6 +31,8 @@ def connect():
         print("MT5 connected but AutoTrading is disabled — enable it in MT5 toolbar")
         mt5.shutdown()
         return False
+    # Brief pause so the terminal finishes syncing data before the first fetch
+    time.sleep(3)
     return True
 
 

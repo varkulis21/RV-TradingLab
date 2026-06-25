@@ -209,6 +209,10 @@ class GoldBot:
             return
 
         self.log.info("Connected. Bot is running. Press Ctrl+C to stop.")
+        self.log.info(
+            "TIP: if this is a cold start, open the XAUUSD H1 chart in MT5 "
+            "to pre-load history. First data fetch may take up to 2 minutes."
+        )
         self._running = True
 
         try:
