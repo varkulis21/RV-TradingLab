@@ -9,7 +9,7 @@ SYMBOL     = "XAUUSD"
 DATA_SOURCE = "mt5"
 
 # ── Risk management ───────────────────────────────────────────────
-RISK_PER_TRADE_PCT  = 1.0   # % of balance to risk on each trade
+RISK_PER_TRADE_PCT  = 0.5   # % of balance to risk on each trade
 RR_RATIO            = 2.0   # take-profit = stop distance × this
 ATR_PERIOD          = 14    # lookback for ATR (volatility measure)
 ATR_SL_MULTIPLIER   = 1.5   # stop-loss = ATR × this multiplier

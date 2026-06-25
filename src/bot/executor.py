@@ -43,6 +43,9 @@ def place_market_order(
         {"ok": True,  "ticket": int, "price": float}
         {"ok": False, "error": str}
     """
+    if not stop_loss or not take_profit or stop_loss <= 0 or take_profit <= 0:
+        return {"ok": False, "error": f"Order rejected: SL={stop_loss} TP={take_profit} must both be non-zero"}
+
     tick = mt5.symbol_info_tick(symbol)
     if tick is None:
         return {"ok": False, "error": f"No tick data for {symbol}"}
