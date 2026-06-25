@@ -6,7 +6,7 @@ SYMBOL     = "XAUUSD"
 
 # "yfinance" = historical data via Yahoo Finance (GC=F Gold Futures)
 # "mt5"      = live bar data from the running MT5 terminal
-DATA_SOURCE = "yfinance"
+DATA_SOURCE = "mt5"
 
 # ── Risk management ───────────────────────────────────────────────
 RISK_PER_TRADE_PCT  = 1.0   # % of balance to risk on each trade
